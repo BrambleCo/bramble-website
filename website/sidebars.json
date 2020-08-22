@@ -1,0 +1,10 @@
+{
+  "docs": {
+    "Bramble": ["doc1"],
+    "Bramble API": ["apiflow","doc2","securityapi"],
+    "Bramblechain": ["doc3","dualtokeninflation","modules","securityblockchain"]
+  },
+  "docs-other": {
+    "First Category": ["doc4", "doc5"]
+  }
+}
