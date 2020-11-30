@@ -60,7 +60,9 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} />
+       <br/>
+       <br/>  
+      <Logo img_src={`${baseUrl}img/undraw_monitor.svg`} />
         <div className="inner">
           <ProjectTitle tagline={siteConfig.tagline} title={siteConfig.title} />
           <PromoSection>
@@ -69,6 +71,8 @@ class HomeSplash extends React.Component {
             <Button href={docUrl('doc3.html')}>Bramblechain</Button>
           </PromoSection>
         </div>
+        <br/>
+        <br/>
       </SplashContainer>
     );
   }
@@ -122,7 +126,7 @@ class Index extends React.Component {
         {[
           {
             content:
-              'This is another description of how this project is useful',
+              'Useful for online applications(games, social media, etc) to reward their users',
             image: `${baseUrl}img/undraw_note_list.svg`,
             imageAlign: 'right',
             title: 'Description',
@@ -198,12 +202,12 @@ class Index extends React.Component {
       <div>
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
-          <Features />
+          {/*<Features />
           <FeatureCallout />
           <LearnHow />
           <TryOut />
           <Description />
-          <Showcase />
+          <Showcase />*/}
         </div>
       </div>
     );

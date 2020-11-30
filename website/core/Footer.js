@@ -43,13 +43,8 @@ class Footer extends React.Component {
             <h5>Community</h5>
             <a href={`${this.props.config.baseUrl}users`}>User Showcase</a>
           
-            <a href="https://discord.gg/UKBGhrX">Project Chat</a>
-            <a
-              href="https://twitter.com/brambleapi"
-              target="_blank"
-              rel="noreferrer noopener">
-              Twitter
-            </a>
+            <a href="https://discord.gg/zrxGhrwNs7">Project Chat</a>
+           
           </div>
           <div>
             <h5>More</h5>
