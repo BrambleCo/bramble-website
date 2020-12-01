@@ -25,7 +25,7 @@ const users = [
 const siteConfig = {
   customDocsPath: path.basename(__dirname) + '/docs',
   title: 'Bramble', // Title for your website.
-  tagline: 'Universal Reward ecosystem for games, social media and online applications',
+  tagline: 'Universal reward ecosystem for games, social media and online applications',
   url: 'https://bramble.co.in', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
