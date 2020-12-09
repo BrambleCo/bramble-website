@@ -2,7 +2,7 @@
   "docs": {
     "Bramble": ["doc1"],
     "Bramble API": ["apiflow","doc2","securityapi"],
-    "Bramblechain": ["doc3","substrate","dualtokeninflation","modules","securityblockchain"]
+    "Bramble Blockchain": ["doc3","substrate","dualtokeninflation","modules","securityblockchain"]
   },
   "docs-other": {
     "First Category": ["doc4", "doc5"]

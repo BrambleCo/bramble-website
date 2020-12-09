@@ -68,7 +68,7 @@ class HomeSplash extends React.Component {
           <PromoSection>
             {/*<Button href="#try">Wallet</Button>*/}
             <Button href={docUrl('apiflow.html')}>Bramble API</Button>
-            <Button href={docUrl('doc3.html')}>Bramblechain</Button>
+            <Button href={docUrl('doc3.html')}>Bramble Blockchain</Button>
           </PromoSection>
         </div>
         <br/>
