@@ -72,7 +72,7 @@ title: REST API Calls
 * **Sample Call:**
 
   ```javascript
-  window.open('http://3.19.60.28:3000/bramble?response_type=code&client_id=mansim&redirect_uri=http://armygrid.com/callback/&state=teststate&scope=profile', '_self');
+  window.open('https://brambleapi.herokuapp.com/bramble?response_type=code&client_id=mansim&redirect_uri=http://armygrid.com/callback/&state=teststate&scope=profile', '_self');
   ```
 * **Notes:**
 
@@ -134,7 +134,7 @@ title: REST API Calls
   ```javascript
     //JS
         var xhr = new XMLHttpRequest();
-        authURL = "http://3.19.60.28/grant";
+        authURL = "https://brambleapi.herokuapp.com/grant";
         xhr.open('POST',authURL, true);
         xhr.setRequestHeader("Authorization","Basic "+ btoa("mansim:armygrid"));
         xhr.setRequestHeader("Content-Type", "application/json"); 
@@ -158,7 +158,7 @@ title: REST API Calls
   }
 
   var options = {
-    url: 'http://3.19.60.28:3000/grant',
+    url: 'https://brambleapi.herokuapp.com/grant',
     method: 'POST',
     headers: {
     "Authorization":"Basic " + btoa("mansim:armygrid")
@@ -248,7 +248,7 @@ Request which will send Achievements data of the user to Bramble API. So if a us
 
   ```javascript
         var xhr = new XMLHttpRequest();
-        var achievementURL = "http://3.19.60.28:3000/achievement/armygrid/sample_achievement_2";
+        var achievementURL = "http://brambleapi.herokuapp.com/achievement/armygrid/sample_achievement_2";
         xhr.open('GET',achievementURL, true);
         xhr.setRequestHeader("Authorization","Bearer "+ "199146e7e010ffa216301333b4c8cc14b9184958");
         xhr.onreadystatechange = function() {
@@ -267,6 +267,7 @@ Request which will send Achievements data of the user to Bramble API. So if a us
 
 **4.** 
 **Renewing Access Token / Refresh Token to get back access to the Bramble API**
+---
 
 Sometimes the Access Token / Refresh Token will expire you will renew them again by this request 
 
@@ -338,7 +339,7 @@ Sometimes the Access Token / Refresh Token will expire you will renew them again
   ```javascript
       //js
         var xhr = new XMLHttpRequest();
-        var renewTokenURL = "http://3.19.60.28:3000/renew";
+        var renewTokenURL = "http://brambleapi.herokuapp.com/renew";
         xhr.open('POST',renewTokenURL, true);
         xhr.setRequestHeader("Authorization","Basic "+ btoa("mansim:armygrid"));
         xhr.setRequestHeader("Content-Type", "application/json"); 
@@ -361,7 +362,7 @@ Sometimes the Access Token / Refresh Token will expire you will renew them again
       }
 
     var options = {
-      url: 'http://3.19.60.28:3000/grant',
+      url: 'http://brambleapi.herokuapp.com/grant',
       method: 'POST',
       headers: {
       "Authorization":"Basic " + btoa("mansim:armygrid")
@@ -388,6 +389,7 @@ Sometimes the Access Token / Refresh Token will expire you will renew them again
 
 **5.** 
 **Returns the total bramble reals in the wallet.**
+---
 
   To read the total amount of bramble reals in the user's wallet.
 
@@ -409,13 +411,184 @@ Sometimes the Access Token / Refresh Token will expire you will renew them again
     **Content:** 
     `80.35`
 
+* **Error Response:**
+
+  * **Code:** 401 <br />
+    **Content:** <br/>
+    ` {
+    "statusCode": 401,
+    "status": 401,
+    "code": 401,
+    "message": "Invalid token: access token has expired",
+    "name": "invalid_token"
+    }`
+
+  * **Code:** 401 <br />
+    **Content:** <br/>
+    ` {
+    "statusCode": 401,
+    "status": 401,
+    "code": 401,
+    "message": "Invalid token: access token is invalid",
+    "name": "invalid_token"
+   }`
 
 * **Sample Call:**
 
   ```javascript
         var xhr = new XMLHttpRequest();
-        var walletBrambleRealsURL = "http://3.19.60.28:3000/wallet_brambles_reals";
+        var walletBrambleRealsURL = "http://brambleapi.herokuapp.com/wallet_brambles_reals";
         xhr.open('GET', walletBrambleRealsURL, true);
+        xhr.setRequestHeader("Authorization","Bearer "+ "199146e7e010ffa216301333b4c8cc14b9184958");
+        xhr.onreadystatechange = function() {
+
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+                alert(xhr.responseText);
+            }
+        }
+
+        xhr.send();
+  ```
+
+**6.** 
+**Sends bramble reals earned to the wallet.**
+---
+
+  To send the amount of bramble reals in the user's wallet.
+
+* **URL**
+
+    /send_brambles_reals/:reals
+
+* **Method:**
+
+  `GET`
+
+*  **URL Params**
+
+   **Required:**
+
+      `reals=[Integer] (example: '4')`  
+
+
+* **Header Params**
+
+    `Authorization='Bearer ' + access_token_received_in_grant_request`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    `success`
+
+
+* **Error Response:**
+
+  * **Code:** 401 <br />
+    **Content:** <br/>
+    ` {
+    "statusCode": 401,
+    "status": 401,
+    "code": 401,
+    "message": "Invalid token: access token has expired",
+    "name": "invalid_token"
+    }`
+
+  * **Code:** 401 <br />
+    **Content:** <br/>
+    ` {
+    "statusCode": 401,
+    "status": 401,
+    "code": 401,
+    "message": "Invalid token: access token is invalid",
+    "name": "invalid_token"
+   }`
+
+  * **Code:** 500 <br />
+    **Content:** <br/>
+    `error`
+
+* **Sample Call:**
+
+  ```javascript
+        var xhr = new XMLHttpRequest();
+        var sendBrambleRealsURL = "http://brambleapi.herokuapp.com/send_brambles_reals/10";
+        xhr.open('GET', sendBrambleRealsURL, true);
+        xhr.setRequestHeader("Authorization","Bearer "+ "199146e7e010ffa216301333b4c8cc14b9184958");
+        xhr.onreadystatechange = function() {
+
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+                alert(xhr.responseText);
+            }
+        }
+
+        xhr.send();
+  ```
+
+**7.** 
+**Handles transfer of Bramble reals to game developer for shop items**
+---
+
+  Can be used for buying NPCs by the users and transfers the required amount to the developer's wallet.  
+
+* **URL**
+
+    /handle_shop_reals/:reals
+
+* **Method:**
+
+  `GET`
+
+*  **URL Params**
+
+   **Required:**
+
+      `reals=[Integer] (example: '4')`  
+
+
+* **Header Params**
+
+    `Authorization='Bearer ' + access_token_received_in_grant_request`
+
+* **Success Response:**
+
+  * **Code:** 200 <br />
+    **Content:** 
+    `success`
+
+
+* **Error Response:**
+
+  * **Code:** 401 <br />
+    **Content:** <br/>
+    ` {
+    "statusCode": 401,
+    "status": 401,
+    "code": 401,
+    "message": "Invalid token: access token has expired",
+    "name": "invalid_token"
+    }`
+
+  * **Code:** 401 <br />
+    **Content:** <br/>
+    ` {
+    "statusCode": 401,
+    "status": 401,
+    "code": 401,
+    "message": "Invalid token: access token is invalid",
+    "name": "invalid_token"
+   }`
+
+  * **Code:** 500 <br />
+    **Content:** <br/>
+    `error`
+
+* **Sample Call:**
+
+  ```javascript
+        var xhr = new XMLHttpRequest();
+        var buyNpcURL = "https://brambleapi.herokuapp.com/handle_shop_reals/4";
+        xhr.open('GET', buyNpcURL, true);
         xhr.setRequestHeader("Authorization","Bearer "+ "199146e7e010ffa216301333b4c8cc14b9184958");
         xhr.onreadystatechange = function() {
 
