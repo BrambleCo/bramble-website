@@ -6,6 +6,19 @@
  */
 
 /* your custom css */
+.imagein {
+    /* display: block; */
+    max-width:205px;
+    max-height:205px;
+    width: auto;
+    height: auto;
+    
+
+}
+
+/* .inner{
+    margin-top: 150px ;
+} */
 
 @media only screen and (min-device-width: 360px) and (max-device-width: 736px) {
 }
