@@ -127,6 +127,11 @@ title: Payments
 
     `Authorization='Bearer ' + access_token_received_in_grant_request`
 
+* **Body Params(raw JSON)**
+    `{  
+      "paymentintent": "607eb2ac1088153ca09ce7b3",      
+    }`
+
 * **Success Response:**
 
   * **Code:** 200 <br />
@@ -149,9 +154,12 @@ title: Payments
 
   ```javascript
         var xhr = new XMLHttpRequest();
-        var walletBrambleRealsURL = "http://brambleapi.herokuapp.com/payment_received_confirmation";
-        xhr.open('GET', walletBrambleRealsURL, true);
+        var paymentReceivedConfirmationURL = "https://brambleapi.herokuapp.com/payment_received_confirmation";
+        xhr.open('GET', paymentReceivedConfirmationURL, true);
         xhr.setRequestHeader("Authorization","Bearer "+ "199146e7e010ffa216301333b4c8cc14b9184958");
+        xhr.setRequestHeader("Content-Type", "application/json"); 
+        var data = JSON.stringify({ "paymentintent": "607eb2ac1088153ca09ce7b3"});
+        
         xhr.onreadystatechange = function() {
 
         if (xhr.readyState == XMLHttpRequest.DONE) {
@@ -159,5 +167,33 @@ title: Payments
             }
         }
 
-        xhr.send();
+        xhr.send(data);
+  ```
+
+  ```javascript
+      //request module nodejs
+      var rData = {
+		    "paymentintent": "607eb2ac1088153ca09ce7b3"
+	    }
+
+    var options = {
+      url: 'https://brambleapi.herokuapp.com/payment_received_confirmation',
+		    method: 'GET',
+		    headers: {
+		      "Authorization":"Bearer " + "199146e7e010ffa216301333b4c8cc14b9184958"
+	    	},
+		    body:postData,
+		    json:true,
+    };
+
+    function callback(error, response, body) {
+      if (!error && response.statusCode == 200) {
+        console.log(body);
+      }
+      else{
+        console.log(body);
+      }
+    }
+
+    request(options, callback);
   ```
