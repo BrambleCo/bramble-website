@@ -175,18 +175,18 @@ title: Payments
   ```javascript
       //request module nodejs
       var rData = {
-		    "paymentintent": "607eb2ac1088153ca09ce7b3"
-	    }
+        "paymentintent": "607eb2ac1088153ca09ce7b3"
+      }
 
-    var options = {
+      var options = {
       url: 'https://brambleapi.herokuapp.com/payment_received_confirmation',
-		    method: 'GET',
-		    headers: {
-		      "Authorization":"Bearer " + "199146e7e010ffa216301333b4c8cc14b9184958"
-	    	},
-		    body:postData,
-		    json:true,
-    };
+        method: 'GET',
+        headers: {
+          "Authorization":"Bearer " + "199146e7e010ffa216301333b4c8cc14b9184958"
+        },
+        body:rData,
+        json:true,
+      };
 
     function callback(error, response, body) {
       if (!error && response.statusCode == 200) {
