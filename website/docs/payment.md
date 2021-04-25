@@ -106,7 +106,7 @@ title: Payments
   window.open('https://brambleapi.herokuapp.com/bramblepay?pintent=21312312', '_self');
   ```
 * **Notes:**
-  After successful completion of the payment the user will be redirected back to the game with the payment intent as a url param. use that payment intent in the next step. Actually you recieve that payment intent in the 1st request as well.
+  After successful completion of the payment the user will be redirected back to the game with the payment intent as a url param. Use that payment intent in the next step. Actually you recieve that payment intent in the 1st request as well.
 
 <br/>
 
