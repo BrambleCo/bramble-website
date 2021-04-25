@@ -77,6 +77,7 @@ title: Authorization
 * **Notes:**
 
   The user will be redirected after the authorization step to the callback url of the game. The authorization code will be attached to the callback url ( Example: http://armygrid.com/callback/authorization_code ). Extract the authorization_code value and use it in the next request.
+<br/>
 
 **2.**
 **Authorization Grant Request**
@@ -183,6 +184,8 @@ title: Authorization
 * **Notes:**
 
   You will get two tokens. Refresh Token and Access Token. Refresh Token is the one which doesn't expire frequently but Access token expire frequently. This Access Token will help you in sending the Achievement Data to the Bramble API as seen in the next request.
+
+<br/>
 
 **3.** 
 **Renewing Access Token / Refresh Token to get back access to the Bramble API**

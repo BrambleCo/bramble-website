@@ -2,6 +2,7 @@
 id: registration
 title: Registration
 ---
+<br/>
 
 **1.**
 **Bramble Registration Page with Redirect**

@@ -1,7 +1,7 @@
 {
   "docs": {
     "Bramble": ["doc1"],
-    "Bramble API": ["apiflow","authorization","registration","achievements","user_metadata","securityapi"],
+    "Bramble API": ["apiflow","authorization","registration","achievements","user_metadata","payments"],
     "Bramble Blockchain": ["doc3","substrate","dualtokeninflation","modules","securityblockchain"]
   },
   "docs-other": {
