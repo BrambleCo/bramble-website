@@ -94,6 +94,7 @@ title: Payments
   * **Code:** 200 <br />
     **Content:**
      `Opens the Bramble Payment Page for the user`
+     
 
 * **Error Response:**
 
@@ -105,7 +106,7 @@ title: Payments
   window.open('https://brambleapi.herokuapp.com/bramblepay?pintent=21312312', '_self');
   ```
 * **Notes:**
-  After successful completion of the payment the user will be redirected back to the game.
+  After successful completion of the payment the user will be redirected back to the game with the payment intent as a url param. use that payment intent in the next step. Actually you recieve that payment intent in the 1st request as well.
 
 <br/>
 
@@ -128,6 +129,7 @@ title: Payments
     `Authorization='Bearer ' + access_token_received_in_grant_request`
 
 * **Body Params(raw JSON)**
+
     `{  
       "paymentintent": "607eb2ac1088153ca09ce7b3",      
     }`
