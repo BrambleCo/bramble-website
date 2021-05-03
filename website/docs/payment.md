@@ -12,7 +12,7 @@ title: Payments
 
 * **URL**
 
-    /paylink
+    /paylink?amount=1
 
 * **Method:**
 
@@ -21,6 +21,12 @@ title: Payments
 * **Header Params**
 
     `Authorization='Bearer ' + access_token`
+
+*  **URL Query Params**
+
+   **Required:**
+ 
+   `amount=[Number] (example: 1.2)`
 
 * **Success Response:**
 
@@ -54,7 +60,7 @@ title: Payments
 
   ```javascript
         var xhr = new XMLHttpRequest();
-        var paylinkURL = "https://brambleapi.herokuapp.com/paylink";
+        var paylinkURL = "https://brambleapi.herokuapp.com/paylink?amount=1";
         xhr.open('GET', paylinkURL, true);
         xhr.setRequestHeader("Authorization","Bearer "+ "199146e7e010ffa216301333b4c8cc14b9184958");
         xhr.onreadystatechange = function() {
