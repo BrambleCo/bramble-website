@@ -79,6 +79,9 @@ Request which will send Achievements data of the user to Bramble API. So if a us
         xhr.send();
   ```
 
+
+
+
 * **Notes:**
 
   After the achievements are sent to the Bramble API. The Bramble API rewards the user Brambles and the reward is reflected in the Bramble Wallet of the User.
