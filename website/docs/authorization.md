@@ -205,6 +205,14 @@ Sometimes the Access Token / Refresh Token will expire you will renew them again
 
     `Authorization='Basic ' + btoa('client_id:client_secret_id)'`
 
+*  **URL Query Params**
+
+   **Recommended:**
+
+   `type=[String] (example: 'access')`
+
+   It will renew only the access token, if set, if not then it will renew both refresh token and access token.
+
 * **Body Params(raw JSON)**
     `{  
       "grant_type": "refresh_token",
