@@ -25,7 +25,7 @@ const users = [
 const siteConfig = {
   customDocsPath: path.basename(__dirname) + '/docs',
   title: 'Bramble', // Title for your website.
-  tagline: 'Universal reward ecosystem for games, social media and online applications',
+  tagline: 'Integrable cryptocurrency for games',
   url: 'https://bramble.co.in', // Your website URL
   baseUrl: '/', // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
@@ -41,10 +41,10 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'doc1', label: 'Docs'},
-    {doc: 'intro-api', label: 'API'},
-    {page: 'help', label: 'Help'},
-    {blog: true, label: 'Blog'},
+    {doc: 'doc1', label: 'For Developers'},
+    {forbusiness: true, label: 'For Business'},
+    {fordiscord: true, label: 'Connect on Discord'},
+    {playgames: true, label: 'Play Games'},
   ],
 
   // If you have users set above, you add it here:

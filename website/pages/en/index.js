@@ -67,14 +67,14 @@ class HomeSplash extends React.Component {
     return (
       <SplashContainer>
         
-        <Logo2 img_src={`${baseUrl}img/logo.png`} />
+        {/* <Logo2 img_src={`${baseUrl}img/logo.png`} /> */}
 
         <div className="inner">
           <ProjectTitle tagline={siteConfig.tagline} title={siteConfig.title} />
           <PromoSection>
             {/*<Button href="#try">Wallet</Button>*/}
-            <Button href={docUrl('intro-api.html')}>Bramble API</Button>
-            <Button href={docUrl('doc3.html')}>Bramble Blockchain</Button>
+            {/* <Button href={docUrl('intro-api.html')}>Bramble API</Button> */}
+            {/* <Button href={docUrl('doc3.html')}>Bramble Blockchain</Button> */}
           </PromoSection>
         </div>
         <br/>
