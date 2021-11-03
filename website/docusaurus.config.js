@@ -21,7 +21,7 @@ module.exports = {
     announcementBar: {
       id: 'announcementBar',
       backgroundColor: '#74e8a3',
-      isCloseable: true,
+      isCloseable: false,
       content:
         'Talk to us on our <a target="_blank" rel="noopener noreferrer" href="https://discord.com/invite/zrxGhrwNs7">Discord</a> ⭐ !',
     },

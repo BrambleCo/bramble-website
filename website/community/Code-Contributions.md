@@ -13,13 +13,13 @@ Come experience and be a part of the future Play to Earn model
 
 :::info
 
-To get in touch with us, join our Discord channel. Bramble Team hangs out on [Discord](https://discord.com/invite/zrxGhrwNs7).
+To get in touch with us, join our Discord channel. Bramble Team hangs out on [Discord](https://discord.com/invite/zrxGhrwNs7)
 
 :::
 
 :::info
 
-Sign up for [Beta Application Form](https://docs.google.com/forms/d/e/1FAIpQLSfQb7ErrFJBue_V2yyCTu9gi3MxnaXSRszGrUBO1D15qCREQw/viewform).
+Sign up for [Beta](https://docs.google.com/forms/d/e/1FAIpQLSfQb7ErrFJBue_V2yyCTu9gi3MxnaXSRszGrUBO1D15qCREQw/viewform)
 
 :::
 
